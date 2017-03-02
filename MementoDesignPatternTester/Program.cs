@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Structural = MementoDesignPatternTester.StructuralCode;
+using Real = MementoDesignPatternTester.RealWorldCode;
 
 namespace MementoDesignPatternTester
 {
@@ -15,7 +16,7 @@ namespace MementoDesignPatternTester
     class Program
     {
         // Memento
-        
+
         // Definition
         // Without violating encapsulation, capture and externalize an object's internal state
         // so that the object can be restored to this state later.
@@ -58,6 +59,31 @@ namespace MementoDesignPatternTester
 
             // Restore saved state;0
             o.SetMemento(c.Memento);
+
+            // Wait for user
+            Console.ReadKey();
+            #endregion
+
+            #region Real-world code in C#
+            // Real-world code in C#
+            // This real-world code demonstrates the Memento pattern which temporarily saves
+            // and then restores the SalesProspect's internal state. 
+            Real.SalesProspect s = new Real.SalesProspect();
+            s.Name = "Franco Pellegrino";
+            s.Phone = "123456789";
+            s.Budget = 999999;
+
+            // Store internal state
+            Real.ProspectMemory p = new Real.ProspectMemory();
+            p.Memento = s.SaveMemento();
+
+            // Continue changing originator
+            s.Name = "Mario Pellegrino";
+            s.Phone = "987654321";
+            s.Budget = 111111;
+
+            // Restore saved state
+            s.RestoreMemento(p.Memento);
 
             // Wait for user
             Console.ReadKey();

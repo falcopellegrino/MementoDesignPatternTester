@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealWorldCode\ProspectMemory.cs" />
+    <Compile Include="RealWorldCode\Memento.cs" />
+    <Compile Include="RealWorldCode\SalesProspect.cs" />
     <Compile Include="StructuralCode\Caretaker.cs" />
     <Compile Include="StructuralCode\Memento.cs" />
     <Compile Include="StructuralCode\Originiator.cs" />
