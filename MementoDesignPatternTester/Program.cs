@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Structural = MementoDesignPatternTester.StructuralCode;
 using Real = MementoDesignPatternTester.RealWorldCode;
+using My = MementoDesignPatternTester.MyCode;
 
 namespace MementoDesignPatternTester
 {
@@ -88,6 +89,24 @@ namespace MementoDesignPatternTester
             // Wait for user
             Console.ReadKey();
             #endregion
+
+            #region My code in C#
+            // Real-world code in C#
+            // This real-world code demonstrates the Memento pattern which temporarily saves
+            // and then restores the SalesProspect's internal state. 
+            My.ProspectMemory pm = new My.ProspectMemory();
+
+            My.Dichiarazione d = new My.Dichiarazione(pm);
+            d.StatoDichiarazione = My.StatoDichiarazione.Completa;
+            d.StatoDichiarazione = My.StatoDichiarazione.Stampata;
+            d.StatoDichiarazione = My.StatoDichiarazione.Inviata;
+
+            d.RestoreStatoDichiarazioneFromMemento(pm.Memento);
+
+            // Wait for user
+            Console.ReadKey();
+            #endregion
+
 
         }
     }

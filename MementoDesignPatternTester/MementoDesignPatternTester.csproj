@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyCode\StatoDichiarazione.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MyCode\MementoDichiarazione.cs" />
+    <Compile Include="MyCode\ProspectMemory.cs" />
+    <Compile Include="MyCode\Dichiarazione.cs" />
     <Compile Include="RealWorldCode\ProspectMemory.cs" />
     <Compile Include="RealWorldCode\Memento.cs" />
     <Compile Include="RealWorldCode\SalesProspect.cs" />
