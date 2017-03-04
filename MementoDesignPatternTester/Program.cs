@@ -11,7 +11,7 @@ using My = MementoDesignPatternTester.MyCode;
 namespace MementoDesignPatternTester
 {
     /// <summary>
-    /// MainApp startup class for Structural
+    /// MainApp startup class
     /// Memento Design Pattern
     /// </summary>
     class Program
